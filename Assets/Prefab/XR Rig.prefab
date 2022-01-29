@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 11487973}
   m_Layer: 0
   m_Name: lfire
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1279381996}
   m_Layer: 0
   m_Name: rfire
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 6367832718866830383}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Camera: {fileID: 0}
   m_OriginBaseGameObject: {fileID: 6367832718940434033}
   m_CameraFloorOffsetObject: {fileID: 6367832720473333579}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.36144
   m_CameraGameObject: {fileID: 6367832720206046625}
 --- !u!114 &6367832718940433998
@@ -783,7 +783,7 @@ MonoBehaviour:
   muzzle: {fileID: 2531541761228895742, guid: 59daf25d03ad71840b0a5f64998d7633, type: 3}
   LHFirePoint: {fileID: 11487973}
   RHFirePoint: {fileID: 1279381996}
-  projectileSpeed: 0
+  projectileSpeed: 30
   fireRate: 4
   arcRange: 1
 --- !u!1 &6367832719234388495
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 6367832719234388493}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1327,7 +1327,7 @@ GameObject:
   - component: {fileID: 2043695929}
   m_Layer: 0
   m_Name: Locomotion System
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 6367832720206046654}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1672,7 +1672,7 @@ GameObject:
   - component: {fileID: 6367832720473333577}
   m_Layer: 0
   m_Name: Camera Offset
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
