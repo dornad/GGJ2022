@@ -12,7 +12,9 @@ public enum Targets : byte
 
     Waterfall,
     Barrel,
+    Vines,
     Rope,
+    Leak,
 
     FireEnemy,
     IceEnemy,
