@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TestingInputSystem : MonoBehaviour {
 
@@ -11,8 +12,10 @@ public class TestingInputSystem : MonoBehaviour {
     private void Awake() {
         cameraRigidbody = GetComponent<Rigidbody>();
     }
-    public void Jump() {
-        Debug.Log("Jump!");
-        cameraRigidbody.AddForce(Vector3.up * amount, ForceMode.Impulse);
+    public void Jump(InputAction.CallbackContext context) {
+        if (context.performed) {
+            Debug.Log("Jump!");
+            cameraRigidbody.AddForce(Vector3.up * amount, ForceMode.Impulse);
+        }
     }
 }
