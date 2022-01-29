@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestingInputSystem : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class TestingInputSystem : MonoBehaviour {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField]
+    public float amount = 5.0f;
+    private Rigidbody cameraRigidbody;
+
+    private void Awake() {
+        cameraRigidbody = GetComponent<Rigidbody>();
+    }
+    public void Jump() {
+        Debug.Log("Jump!");
+        cameraRigidbody.AddForce(Vector3.up * amount, ForceMode.Impulse);
     }
 }
