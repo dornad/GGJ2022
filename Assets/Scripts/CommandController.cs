@@ -41,7 +41,7 @@ public sealed class CommandController : MonoBehaviour
 
     // --- Internal Procedures:
 
-    public void loadScene(Scenes targetScene)
+    private void loadScene(Scenes targetScene)
         {
 
         SceneManager.LoadScene((int)targetScene);
