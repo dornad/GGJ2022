@@ -20918,6 +20918,7 @@ GameObject:
   - component: {fileID: 1701059427}
   - component: {fileID: 1701059426}
   - component: {fileID: 1701059425}
+  - component: {fileID: 1701059428}
   m_Layer: 0
   m_Name: Fire Obstacle (Rope)
   m_TagString: Untagged
@@ -21005,6 +21006,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701059423}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1701059428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701059423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37af4f6738c194bb173d4da5528bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1705062305
 PrefabInstance:
   m_ObjectHideFlags: 0

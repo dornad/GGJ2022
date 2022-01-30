@@ -157,7 +157,7 @@ public sealed class CommandController : MonoBehaviour
         {
         // fire burns bridge ropes
 
-        // TODO
+        MasterController.Commands.ChangeScene(Scenes.Menu); // TEST
         }
 
     private void iceAffectsLeak()
