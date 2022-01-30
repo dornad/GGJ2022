@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -158,6 +158,41 @@ public sealed class CommandController : MonoBehaviour
         // fire burns bridge ropes
 
         MasterController.Commands.ChangeScene(Scenes.Menu); // TEST
+
+        GameObject bridgeObject = GameObject.FindGameObjectWithTag("PuzzleOneTransformTarget");
+
+        if (bridgeObject != null) { StartCoroutine(lowerBridge(bridgeObject)); }
+        }
+
+    private IEnumerator lowerBridge(GameObject transformTarget)
+        {
+        Vector3 originalAngles = transformTarget.transform.localEulerAngles;
+
+        float elapsedTime = 0.0f;
+        float effectTime = 2.2f;
+
+        float timeFraction = 0;
+
+        float startAngle = -60f;
+        float endAngle = -26f;
+
+        float totalShift = startAngle - endAngle;
+
+        while (elapsedTime < effectTime)
+            {
+            yield return null;
+
+            elapsedTime += Time.deltaTime;
+
+            timeFraction = elapsedTime/effectTime;
+
+            float instantX = totalShift * timeFraction;
+
+            //transformTarget.transform.Rotate(Vector3.left,increment);
+            transformTarget.transform.localEulerAngles = new Vector3(instantX,originalAngles.y,originalAngles.z);
+            }
+
+        yield break;
         }
 
     private void iceAffectsLeak()

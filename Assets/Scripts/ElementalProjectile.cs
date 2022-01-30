@@ -4,11 +4,13 @@ using UnityEngine;
 namespace Assets.Scripts
 {
 
-public sealed class ProjectileTut : MonoBehaviour, IAbility 
+public sealed class ElementalProjectile : MonoBehaviour, IAbility 
     {
     // --- Properties:
 
-    public Abilities Type { get { return(Abilities.Fire); } }
+    private static Abilities chosenAbility = Abilities.Fire;    // TEST - should start undefined
+
+    public Abilities Type { get { return(chosenAbility); } }
 
     public GameObject impactVFX;
 
@@ -16,7 +18,13 @@ public sealed class ProjectileTut : MonoBehaviour, IAbility
 
     // --- External Behaviours:
 
-    void OnCollisionEnter(Collision collision)
+    public static void ChooseElement(Abilities abilityType)
+        {
+
+        chosenAbility = abilityType;
+        }
+
+    public void OnCollisionEnter(Collision collision)
         {
         if (collision.gameObject.tag != "Bullet" && collision.gameObject.tag != "Player" && !collided)
             {
