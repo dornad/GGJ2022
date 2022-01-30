@@ -25,6 +25,12 @@ public sealed class CommandController : MonoBehaviour
         loadScene(targetScene);
         }
 
+    public void CloseApplication()
+        {
+
+        Application.Quit();
+        }
+
     #endregion
 
     #region Gameplay

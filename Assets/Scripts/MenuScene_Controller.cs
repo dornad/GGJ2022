@@ -15,6 +15,12 @@ public sealed class MenuScene_Controller : MonoBehaviour
         MasterController.Commands.ChangeScene(Scenes.Level);
         }
 
+    public void Click_QuitButton()
+        {
+
+        MasterController.Commands.CloseApplication();
+        }
+
     }
 
 }
