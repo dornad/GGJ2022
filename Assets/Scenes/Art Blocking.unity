@@ -25954,6 +25954,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1932966713}
     m_Modifications:
+    - target: {fileID: 1983950649, guid: e141cd63d7296954ba7aec123c176504, type: 3}
+      propertyPath: projectileA
+      value: 
+      objectReference: {fileID: 4502836691042660713, guid: e1a1b3f06167b0f429d3497925d81750,
+        type: 3}
+    - target: {fileID: 1983950649, guid: e141cd63d7296954ba7aec123c176504, type: 3}
+      propertyPath: projectileB
+      value: 
+      objectReference: {fileID: 7745482738351134709, guid: 358df6ce3d638c349852c6f3545eefb7,
+        type: 3}
     - target: {fileID: 6367832718940433999, guid: e141cd63d7296954ba7aec123c176504,
         type: 3}
       propertyPath: m_RootOrder
