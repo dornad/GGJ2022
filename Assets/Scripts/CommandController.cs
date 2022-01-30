@@ -8,12 +8,17 @@ namespace Assets.Scripts
 
 public sealed class CommandController : MonoBehaviour
     {
-    // Start is called before the first frame update
-    void Start()
+    // --- Properties:
+
+    public Scenes CurrentScene { get; private set; }
+
+    // --- Initialization:
+
+    public void Awake()
         {
         
+        CurrentScene = Scenes.Initial;
         }
-
 
     // --- External Behaviours:
 
@@ -49,8 +54,9 @@ public sealed class CommandController : MonoBehaviour
 
     private void loadScene(Scenes targetScene)
         {
-
         SceneManager.LoadScene((int)targetScene);
+
+        CurrentScene = targetScene;
         }
 
     private void triggerEffect(Abilities ability, Targets target)

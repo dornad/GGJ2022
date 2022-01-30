@@ -24,7 +24,8 @@ public sealed class MasterController : MonoBehaviour
     private static MasterController instance = null;
     private static InitState state = InitState.empty;
 
-    private CommandController commandController; 
+    private CommandController commandController;
+    private InputController inputController;
 
     // --- Properties:
     
@@ -32,6 +33,11 @@ public sealed class MasterController : MonoBehaviour
     /// Controller of gameplay states.
     /// </summary>
     public static CommandController Commands { get { return(instance.commandController); } }
+
+    /// <summary>
+    /// Controller of input reactions.
+    /// </summary>
+    public static InputController Inputs { get { return(instance.inputController); } }
 
     // --- Lifecycle:
 
@@ -53,6 +59,7 @@ public sealed class MasterController : MonoBehaviour
         // setup manager instances
 
         commandController = gameObject.AddComponent<CommandController>();
+        inputController = gameObject.AddComponent<InputController>();
         }
     
     /// <summary>
