@@ -8,8 +8,11 @@ using System;
 public class FPSShooterTut : MonoBehaviour {
 
     public Camera cam;
-    public GameObject projecile;
-    public GameObject muzzle;
+    
+    public GameObject projectileA;
+    public GameObject projectileB;
+
+    // public GameObject muzzle;
     public Transform LHFirePoint, RHFirePoint;
     public float projectileSpeed = 30.0f;
     public float fireRate = 4.0f;
@@ -58,12 +61,12 @@ public class FPSShooterTut : MonoBehaviour {
 
     void InstantiateProjectile(Transform firePoint)
     {
-        var projectileObj = Instantiate(projecile, firePoint.position, Quaternion.identity) as GameObject;
+        var projectileObj = Instantiate(projectileA, firePoint.position, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firePoint.position).normalized * projectileSpeed;
 
         iTween.PunchPosition(projectileObj, new Vector3(UnityEngine.Random.Range(-arcRange, arcRange), UnityEngine.Random.Range(-arcRange, arcRange), 0), UnityEngine.Random.Range(0.5f, 2.0f));
 
-        var muzzleObj = Instantiate(muzzle, firePoint.position, Quaternion.identity) as GameObject;
-        Destroy(muzzleObj, 2);
+        // var muzzleObj = Instantiate(muzzle, firePoint.position, Quaternion.identity) as GameObject;
+        // Destroy(muzzleObj, 2);
     }
 }
