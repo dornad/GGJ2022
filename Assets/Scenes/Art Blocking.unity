@@ -3638,8 +3638,9 @@ GameObject:
   - component: {fileID: 251772526}
   - component: {fileID: 251772525}
   - component: {fileID: 251772524}
+  - component: {fileID: 251772527}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: IcePortalPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3710,6 +3711,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: -88.641, y: -33.229, z: 114.862}
+--- !u!114 &251772527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251772523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a96f97a3c6347d4db304734fe8d3ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &258289686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9605,7 +9618,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681637823}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -24032,8 +24045,9 @@ GameObject:
   - component: {fileID: 1910545078}
   - component: {fileID: 1910545077}
   - component: {fileID: 1910545076}
+  - component: {fileID: 1910545079}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: FirePortalPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24104,6 +24118,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -90, y: -37.978, z: 0}
+--- !u!114 &1910545079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910545075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3e1e2a15bfe5b4a91630b8597e6193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1910983491
 PrefabInstance:
   m_ObjectHideFlags: 0
