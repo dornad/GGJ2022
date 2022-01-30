@@ -27237,6 +27237,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3553988185023654114, guid: e1a1b3f06167b0f429d3497925d81750,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4502836691042660713, guid: e1a1b3f06167b0f429d3497925d81750,
         type: 3}
       propertyPath: m_Name
@@ -27295,6 +27300,11 @@ PrefabInstance:
     - target: {fileID: 4502836691042660715, guid: e1a1b3f06167b0f429d3497925d81750,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166046699294929199, guid: e1a1b3f06167b0f429d3497925d81750,
+        type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
