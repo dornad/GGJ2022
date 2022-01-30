@@ -8,7 +8,7 @@ public sealed class ElementalProjectile : MonoBehaviour, IAbility
     {
     // --- Properties:
 
-    private static Abilities chosenAbility = Abilities.Fire;    // TEST - should start undefined
+    private static Abilities chosenAbility = Abilities.Undefined;
 
     public Abilities Type { get { return(chosenAbility); } }
 

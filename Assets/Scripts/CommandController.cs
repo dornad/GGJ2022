@@ -16,7 +16,6 @@ public sealed class CommandController : MonoBehaviour
 
     public void Awake()
         {
-        
         CurrentScene = Scenes.Initial;
         }
 
@@ -40,12 +39,14 @@ public sealed class CommandController : MonoBehaviour
 
     #region Gameplay
 
-    public void ApplyAbility(IAbility sourceAbility, ITarget targetObject)
+    public bool ApplyAbility(IAbility sourceAbility, ITarget targetObject)
         {
         Abilities ability = sourceAbility.Type;
         Targets target = targetObject.Type;
 
-        triggerEffect(ability,target);
+        bool success = triggerEffect(ability,target);
+
+        return(success);
         }
 
     #endregion
@@ -59,9 +60,9 @@ public sealed class CommandController : MonoBehaviour
         CurrentScene = targetScene;
         }
 
-    private void triggerEffect(Abilities ability, Targets target)
+    private bool triggerEffect(Abilities ability, Targets target)
         {
-        Action effectDelegate = null;
+        Func<bool> effectDelegate;
 
         switch (ability)
             {
@@ -71,14 +72,16 @@ public sealed class CommandController : MonoBehaviour
             default: effectDelegate = elementFizzles; break;
             }
 
-        effectDelegate.Invoke();
+        bool success = effectDelegate.Invoke();
+
+        return(success);
         }
 
     #region Elemental Functions 
 
-    private Action fireEffects(Targets target)
+    private Func<bool> fireEffects(Targets target)
         {
-        Action effectDelegate;
+        Func<bool> effectDelegate;
 
         switch(target)
             {
@@ -95,9 +98,9 @@ public sealed class CommandController : MonoBehaviour
         return(effectDelegate);
         }
 
-    private Action iceEffects(Targets target)
+    private Func<bool> iceEffects(Targets target)
         {
-        Action effectDelegate;
+        Func<bool> effectDelegate;
 
         switch(target)
             {
@@ -118,50 +121,71 @@ public sealed class CommandController : MonoBehaviour
 
     #region Combination Effects
 
-    private void elementFizzles()
+    private bool elementFizzles()
         {
         // wrong spell/object combination
 
-        // TODO
+        // TODO perform player feedback
+
+        return false;
         }
 
-    private void fireAffectsBarrel()
+    private bool fireAffectsBarrel()
         {
         // fires explodes barrel
 
         // TODO
+
+        return true;
         }
 
-    private void iceAffectsWaterfall()
+    private bool iceAffectsWaterfall()
         {
         // ice freezes~shatters waterfall
 
         // TODO
+
+        return true;
         }
 
-    private void iceAffectsVines()
+    private bool iceAffectsVines()
         {
         // ice shatters vines
 
         // TODO
+
+        return true;
         }
 
-    private void fireAffectsVines()
+    private bool fireAffectsVines()
         {
         // fire burns vines
 
         // TODO
+
+        return true;
         }
 
-    private void fireAffectsRopes()
+    private bool fireAffectsRopes()
         {
         // fire burns bridge ropes
 
-        MasterController.Commands.ChangeScene(Scenes.Menu); // TEST
-
         GameObject bridgeObject = GameObject.FindGameObjectWithTag("PuzzleOneTransformTarget");
 
-        if (bridgeObject != null) { StartCoroutine(lowerBridge(bridgeObject)); }
+        if (bridgeObject != null)
+           {
+           //MasterController.Commands.ChangeScene(Scenes.Menu); // TEST
+
+           //Reactor_RopeObstacle puzzleStatus = bridgeObject.GetComponent<Reactor_RopeObstacle>();
+
+           //if (puzzleStatus != null && !puzzleStatus.Solved) ~redudant test, skipped at obstacle itself
+              {
+              StartCoroutine(lowerBridge(bridgeObject));
+              return(true);
+              }
+           }
+
+        return(false);
         }
 
     private IEnumerator lowerBridge(GameObject transformTarget)
@@ -195,39 +219,49 @@ public sealed class CommandController : MonoBehaviour
         yield break;
         }
 
-    private void iceAffectsLeak()
+    private bool iceAffectsLeak()
         {
         // ice freezes leak
 
         // TODO
+
+        return true;
         }
 
-    private void fireOnVulnerableEnemy()
+    private bool fireOnVulnerableEnemy()
         {
         // fire spell on ice enemy
 
         // TODO
+
+        return true;
         }
 
-    private void fireOnResistantEnemy()
+    private bool fireOnResistantEnemy()
         {
         // fire spell on fire enemy
 
         // TODO
+
+        return true;
         }
 
-    private void iceOnVulnerableEnemy()
+    private bool iceOnVulnerableEnemy()
         {
         // ice spell on fire enemy
 
         // TODO
+
+        return true;
         }
 
-    private void iceOnResistantEnemy()
+    private bool iceOnResistantEnemy()
         {
         // ice spell on ice enemy
 
         // TODO
+
+        return true;
         }
 
     #endregion

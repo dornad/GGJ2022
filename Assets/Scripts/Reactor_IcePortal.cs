@@ -13,11 +13,11 @@ public sealed class Reactor_IcePortal : MonoBehaviour
 
     // --- External Behaviours:
 
-    public void OnCollisionEnter(Collision collisionParameters)
+    public void OnTriggerEnter(Collider colliderParameters)
         {
         // if collides with player, set player ability to fire
 
-        ElementalProjectile.ChooseElement(portalAbility);
+        ElementalProjectile.ChooseElement(portalAbility);   // on any collision
         }
 
 

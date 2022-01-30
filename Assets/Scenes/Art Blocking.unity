@@ -3639,6 +3639,7 @@ GameObject:
   - component: {fileID: 251772525}
   - component: {fileID: 251772524}
   - component: {fileID: 251772527}
+  - component: {fileID: 251772528}
   m_Layer: 0
   m_Name: IcePortalPlane
   m_TagString: Untagged
@@ -3723,6 +3724,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a96f97a3c6347d4db304734fe8d3ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &251772528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251772523}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 0.0000006146729, z: 9.999998}
+  m_Center: {x: 0.00000011920929, y: 0, z: 0}
 --- !u!1001 &258289686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24046,6 +24060,7 @@ GameObject:
   - component: {fileID: 1910545077}
   - component: {fileID: 1910545076}
   - component: {fileID: 1910545079}
+  - component: {fileID: 1910545080}
   m_Layer: 0
   m_Name: FirePortalPlane
   m_TagString: Untagged
@@ -24130,6 +24145,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3e1e2a15bfe5b4a91630b8597e6193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1910545080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910545075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 0.0000015315438, z: 10.000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1910983491
 PrefabInstance:
   m_ObjectHideFlags: 0
